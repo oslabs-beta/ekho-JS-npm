@@ -13,11 +13,11 @@ type legacyFacade = <Input, Output>(callback: Function, experimentName: string, 
 
 type facadeInner = <Input>(callback: Function, experimentName: string, context: object, Ekhomicroservice: string, legacyInput: Input, legacyMicroserviceInput: legacyMicroserviceInput) => void
 
-type module = {
+type ekhomodule = {
   wrap: legacyFacade
 };
 
-const ekhojs: module = {
+const ekhojs: ekhomodule = {
   //define a wrap method which will surround the monolith code for testing.
   //the method will invoke the cb with passed in inputs and store it as a result
   /*then build a request object body
@@ -68,4 +68,4 @@ const ekhojs: module = {
   }
 };
 
-export default ekhojs;
+module.exports = ekhojs;
