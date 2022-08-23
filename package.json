@@ -1,0 +1,30 @@
+{
+    "name": "ekho-js",
+    "version": "1.0.1",
+    "main": "lib/ekhojs.js",
+    "types": "lib/ekhojs.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "^4.7.4"
+    },
+    "dependencies": {
+        "node-fetch": "^3.2.10"
+    },
+    "keywords": [
+        "ekho",
+        "Scientist",
+        "monolith",
+        "microservice",
+        "node",
+        "typescript",
+        "ekhojs"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/oslabs-beta/ekho-JS-npm"
+    },
+    "author": "Ekho"
+}
