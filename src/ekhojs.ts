@@ -1,12 +1,14 @@
 import { RequestInfo, RequestInit } from 'node-fetch';
 
+//IMPORTANT: ts build changes the 'node-fetch' import to a nested require(import). MUST change this to import in the built js file.
 const fetch = (url: RequestInfo, init?: RequestInit) =>
   import('node-fetch').then(({ default: fetch }) => fetch(url, init));
 
+
 type legacyMicroserviceInput = {
-  body: object,
-  params?: object,
-  query?: object
+body: object,
+params?: object,
+query?: object
 };
 
 type legacyFacade = <Input, Output>(callback: Function, experimentName: string, context: object, Ekhomicroservice: string, legacyInput: Input, legacyMicroserviceInput: legacyMicroserviceInput) => Output
@@ -68,4 +70,4 @@ const ekhojs: ekhomodule = {
   }
 };
 
-module.exports = ekhojs;
+export default ekhojs;
