@@ -19,7 +19,7 @@ type ekhomodule = {
   wrap: legacyFacade
 };
 
-const ekhojs: ekhomodule = {
+export const ekhojs: ekhomodule = {
   //define a wrap method which will surround the monolith code for testing.
   //the method will invoke the cb with passed in inputs and store it as a result
   /*then build a request object body
@@ -69,5 +69,3 @@ const ekhojs: ekhomodule = {
     }
   }
 };
-
-export default ekhojs;

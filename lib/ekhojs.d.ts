@@ -7,5 +7,5 @@ declare type legacyFacade = <Input, Output>(callback: Function, experimentName: 
 declare type ekhomodule = {
     wrap: legacyFacade;
 };
-declare const ekhojs: ekhomodule;
-export default ekhojs;
+export declare const ekhojs: ekhomodule;
+export {};
