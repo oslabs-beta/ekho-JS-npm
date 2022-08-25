@@ -6,7 +6,7 @@ const fetch = (url: RequestInfo, init?: RequestInit) =>
 
 
 type legacyMicroserviceInput = {
-body: object,
+body?: object,
 params?: object,
 query?: object
 };
@@ -46,7 +46,7 @@ export const ekhojs: ekhomodule = {
         name: experimentName,
         context: context,
         legacyInput: legacyInput,
-        MicroserviceInput: {
+        args: {
           body: legacyMicroserviceInput.body,
           params: legacyMicroserviceInput.params,
           query: legacyMicroserviceInput.query
