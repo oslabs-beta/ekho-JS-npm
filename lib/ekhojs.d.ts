@@ -1,5 +1,5 @@
 declare type legacyMicroserviceInput = {
-    body: object;
+    body?: object;
     params?: object;
     query?: object;
 };
